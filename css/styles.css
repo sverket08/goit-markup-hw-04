@@ -71,8 +71,13 @@ img{
 }
 .header-address{
     display: flex;
-    gap: 50 px;
-    margin-left: 344px;
+    margin-left: 318px;
+}
+.item{
+    margin-right: 30px;
+}
+.item:last-child{
+    margin-right: 0;
 }
 .header-menu{
     padding-top: 32px;
@@ -86,6 +91,9 @@ img{
 .current{
     color:var(--accent-color);
 }
+.header-menu:hover, .header-menu:focus{
+    color: var(--accent-color);   
+}
 .contact{
     display: flex;
     gap: 10px;
@@ -96,11 +104,11 @@ img{
     color: var(--text-color);
 }
 .contact-icon{
-    fill: var(--text-color);
+    fill: currentColor;
+    display: flex;
+    height: auto;
 }
-.contact-icon:hover, .contact-icon:focus{
-    fill: var(--accent-color);
-}
+
 
 /* Головна сторінка - шапка*/
 .main-blok{
@@ -250,16 +258,18 @@ img{
     border-radius: 50%;
     cursor: pointer;
 }
-.social-link:hover, .social-icon:focus {
+.social-link:hover, .social-link:focus {
     background-color: var(--accent-color);
     color:#FFFFFF;
 }
 .social-icon{
-    fill:  #AFB1B8;
+    display: flex;
+    height: auto;
+    fill: #AFB1B8;
 }
-.social-icon:hover, .social-icon:focus{
+/* .social-icon:hover, .social-icon:focus{
     fill: var(--body-color);
-}
+} */
 .team-item{
     width: 270px;
     height: 368px;
@@ -299,6 +309,7 @@ img{
 .client{
     padding-top: 94px;
     padding-bottom: 94px;
+    background: var(--top-color);
 }
 .title-client{
     font-weight: 700;
@@ -315,30 +326,36 @@ img{
     gap: 30px;
 }
 .client-item{
+    display: block;
     width: 170px;
     height: 92px;
     background-color: var(--top-color);
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 }
-.client-item:hover,
-.client-item:focus {
-    border-color: var(--accent-color);
-}
+
 .client-link{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+}
+.client-link:hover,
+.client-link:focus {
+    border-color: var(--accent-color);
+    color: var(--body-color);
 }
 .client-icon{
+    display: flex;
+    height: auto;
     fill: #AFB1B8;
 }
 
-.client-icon:hover, .client-icon:focus {
+/* .client-icon:hover, .client-icon:focus {
     fill: var(--accent-color);
-}
+} */
 
 /* Підвал */
 .footer{
@@ -462,12 +479,15 @@ img{
    margin-left: 0;
    background: #FFFFFF;
 }
-.portfolio-item:hover, .portfolio-item:focus{
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-list-link{
+    display: block;
 }
+.portfolio-list-link:hover,.portfolio-list-link:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
 
+}
 .card{
     background: url(2910404);
 }
